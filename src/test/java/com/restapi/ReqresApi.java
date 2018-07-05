@@ -4,6 +4,7 @@ import static io.restassured.RestAssured.given;
 import static org.junit.Assert.*;
 
 import org.junit.Test;
+import org.omg.CORBA.PUBLIC_MEMBER;
 
 import com.gargoylesoftware.htmlunit.javascript.host.speech.SpeechSynthesisUtterance;
 
@@ -21,7 +22,7 @@ public class ReqresApi {
 	 * 
 	 */
 
-	@Test
+	//@Test
 	public void getUserTest() {
 		given().accept(ContentType.JSON).and().params("page", 2)
 		.when().get(" https://reqres.in/api/users")
@@ -58,16 +59,18 @@ public class ReqresApi {
           assertEquals("Ramos", jsonPath.getString("data.find{it.id==6}.last_name"));
 		  
 		
-		
-		
-		
-		
-		
-		
-		
-		
-		
+		}
 	
+	@Test
+	public void getUserTest2(){
+		given().accept(ContentType.JSON)
+		.when().get("https://reqres.in/api/unknown")
+		.then().assertThat().statusCode(200);
+		
+		Response response=given().accept(ContentType.JSON)
+				.when().get("https://reqres.in/api/unknown");
+		
+		System.out.println(response.getBody().asString());
 	}
 
 }

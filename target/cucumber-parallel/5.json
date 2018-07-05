@@ -1,0 +1,64 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "line": 3,
+        "name": "Etsy search for an item",
+        "description": "",
+        "id": "etsy-product-search;etsy-search-for-an-item",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 803764554568,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "User in on Etsy homepage",
+            "match": {
+              "location": "StepDefinetions.user_in_on_Etsy_homepage()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 3841792760,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "User searches for \"baby spoon\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "baby spoon",
+                  "offset": 19
+                }
+              ],
+              "location": "StepDefinetions.user_searches_for(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 2835420714,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "Search results should be displayed",
+            "match": {
+              "location": "StepDefinetions.search_results_should_be_displayed()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "Etsy product search",
+    "description": "",
+    "id": "etsy-product-search",
+    "keyword": "Feature",
+    "uri": "C:/Users/Zulimire/workspace/ReviewSessionCodes/src/test/resources/features/Etsysearch5.feature"
+  }
+]
